@@ -9,7 +9,7 @@
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-lg-4">
         <!-- insert <div class="card"> -->
-          <div class="card" style="background-image: img-path("<%= cocktail.name + '.png' %>")>
+          <div class="card" style="background-image: image-url("<%= cocktail.name + '.png' %>")>
             <div class="card-description">
               <h2><%= cocktail.name %></h2>
               <p>Very cool stuff, useful and smart</p>
