@@ -7,15 +7,15 @@
 <div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
-      <div class="col-xs-12 col-sm-4">
+      <div class="col-xs-12 col-lg-4">
         <!-- insert <div class="card"> -->
-          <div class="card" style="background-image: url("<%= cocktail.name.to_s + '.png' %>")>
+          <div class="card" style="background-image: img-path("<%= cocktail.name + '.png' %>")>
             <div class="card-description">
               <h2><%= cocktail.name %></h2>
               <p>Very cool stuff, useful and smart</p>
+              <%= link_to '+', cocktail, {class: "btn btn-primary"} %>
             </div>
-            <a class="card-link" href="#" ></a>
-            <p><%= link_to 'more', cocktail, {class: "btn btn-primary"} %></p>
+
           </div>
       </div>
     <% end %>
