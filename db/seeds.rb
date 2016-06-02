@@ -2,14 +2,14 @@
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 
 #reset data
+Dose.destroy_all
 Ingredient.destroy_all
 Cocktail.destroy_all
-Dose.destroy_all
+
 
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
-
-Cocktail.create(name: "mojito")
-Cocktail.create(name: "Long island ice tea")
-Cocktail.create(name: "Sambuca")
+Ingredient.create(name: "whisky")
+Ingredient.create(name: "vodka")
+Ingredient.create(name: "ice tea")
