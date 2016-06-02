@@ -1,4 +1,28 @@
 Rails.application.routes.draw do
+
+  # get 'cocktails' to 'cocktails#index'
+  # get 'cocktails/:id' to 'cocktails#show'
+  # post 'cocktails' to 'cocktails#create'
+  # get 'cocktails/new' to 'cocktails#new'
+  # get 'cocktails/create' to 'cocktails#create'
+
+
+  root 'cocktails#index'
+  resources :cocktails, only: [:index, :show, :create]
+
+#   Prefix Verb   URI Pattern                   Controller#Action
+#          root GET    /                             cocktails#index
+#     cocktails GET    /cocktails(.:format)          cocktails#index
+#               POST   /cocktails(.:format)          cocktails#create
+#  new_cocktail GET    /cocktails/new(.:format)      cocktails#new
+# edit_cocktail GET    /cocktails/:id/edit(.:format) cocktails#edit
+#      cocktail GET    /cocktails/:id(.:format)      cocktails#show
+#               PATCH  /cocktails/:id(.:format)      cocktails#update
+#               PUT    /cocktails/:id(.:format)      cocktails#update
+#               DELETE /cocktails/:id(.:format)      cocktails#destroy
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
